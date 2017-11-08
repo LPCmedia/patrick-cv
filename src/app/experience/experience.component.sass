@@ -1,0 +1,43 @@
+@import './../../assets/colors.sass'
+$experience-bg-color: $lite-bg
+
+lpc-experience
+  border-right: 5px solid $primary
+  margin-bottom: 10px
+  display: flex
+  flex-direction: row
+  .timeline
+    min-width: 150px
+    text-align: right
+    width: 0
+    &:after
+      content: ''
+      display: block
+      height: 0
+      border-style: solid
+      border-width: 0 50px 25px 0
+      border-color: transparent #{$experience-bg-color} transparent transparent
+    h3
+      color: #2d2d2d
+      font-size: 0.9em
+      margin: 0
+      padding: 10px 1px 0px
+      
+  .experience
+    flex-grow: 1
+    padding: 10px 10px
+    margin: 0 5px 0 0
+    background-color: #{$experience-bg-color}
+    .header
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      h3
+        display: block
+        font-size: 0.9em
+        margin: 0
+        font-weight: bold
+    .company-description
+      font-style: italic
+  
