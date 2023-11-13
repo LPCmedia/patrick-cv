@@ -1,11 +1,18 @@
 @import './../../assets/colors.sass'
 
 lpc-side-bar
-  width: 360px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
   padding: 10px 0
-  height: 100%
+  width: 100%
+  .core-tech
+    width: 45%
+  .profile
+    width: 45%
+    margin-right: 5%
   h1
-    font-weight: normal
+    font-weight: bolder
     font-size: 1.5em
     margin: 0
     text-transform: uppercase

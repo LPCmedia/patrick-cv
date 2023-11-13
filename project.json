@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "name": "patrick-cv",
+  "projectType": "application",
+  "generators": {
+    "@nrwl/angular:component": {
+      "style": "sass"
+    }
+  },
+  "sourceRoot": "src",
+  "prefix": "pg",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist",
+        "index": "src/index.html",
+        "main": "src/main.ts",
+        "polyfills": "src/polyfills.ts",
+        "tsConfig": "src/tsconfig.app.json",
+        "assets": [
+          "src/favicon.ico",
+          "src/assets"
+        ],
+        "styles": [
+          "src/styles.sass"
+        ],
+        "scripts": []
+      },
+      "outputs": [
+        "{options.outputPath}"
+      ]
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "patrick-cv:build"
+      }
+    }
+  }
+}
